@@ -1,7 +1,7 @@
 const products=require("../data/data.js")
 
 const getProducts=(req,res)=>{  //Read
-    res.json(products);
+    res.json({total:products.length,products});
 }
 
 const getProductById=(req,res)=>{  //Read
@@ -44,10 +44,27 @@ const deleteProduct=(req,res)=>{
     res.json({success:true,result});
 }
 
+const searchProducts=(req,res)=>{
+    const {name,category,price}=req.query;
+    console.log(name,category,price)
+    let result;
+    if(name){
+         result=products.filter((product)=>product.name===name);
+    }
+    if(category){
+         result=products.filter((product)=>product.category==category);
+    }
+    if(price){
+         result=products.filter((product)=>product.price===Number(price));
+    }
+    res.json({total:result.length,result});
+}
+
 module.exports={
     getProducts,
     getProductById,
     addProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
+    searchProducts
 }

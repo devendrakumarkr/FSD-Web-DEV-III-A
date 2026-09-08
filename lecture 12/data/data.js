@@ -15,7 +15,7 @@ const products=[
         id:3,
         name:"Ipad pro",
         category:"Tablet",
-        price:20000
+        price:30000
     }
 ]
 

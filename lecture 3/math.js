@@ -6,5 +6,5 @@ function subtract(a, b) {
     return a - b;
 }
 
-// module.exports ={add,subtract};
-export {add,subtract};
+// module.exports ={add,subtract};  //Commonjs module
+export {add,subtract};  //es mk
