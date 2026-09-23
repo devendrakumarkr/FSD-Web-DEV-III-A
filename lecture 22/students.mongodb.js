@@ -38,7 +38,19 @@ use("CollegeDB");
 
 // db.students2.find({marks:{$gte:80}})
 
-// db.students2.find({city:"Surat",marks:{$gte:80}})
-db.students2.find({$or:[
-    {city:"Surat"},{marks:{$gte:80}}
-]})
+// db.students2.find({city:"Surat",marks:{$gte:80}})  //AND 
+// db.students2.find({$or:[   //OR
+//     {city:"Surat"},{marks:{$gte:80}}
+// ]})
+
+// db.students2.find({},{name:1,semester:1,course:1,_id:0})  //Project
+
+// db.students2.find().sort({age:-1})
+
+// db.students2.find().limit(4)
+
+// db.students2.find().skip(3).limit(1)
+
+
+///student find where semester 3 or course btech sort des by his marks and limi it to 2 with skippping one value
+
