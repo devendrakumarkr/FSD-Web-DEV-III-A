@@ -7,11 +7,11 @@ const studentsSchema=new Schema({
         required:true,
         // unique:true,
         // match:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-        validate:{
-            validator:function(value){
-                return value.endsWith("@krmu.edu.in")
-            }
-        }
+        // validate:{
+        //     validator:function(value){
+        //         return value.endsWith("@krmu.edu.in")
+        //     }
+        // }
     },
     age:{
         type:Number,
